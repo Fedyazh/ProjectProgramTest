@@ -20,52 +20,7 @@ namespace ProjectProgramTest
         {
             InitializeComponent();
         }
-        class RootObject
-        {
-            [JsonProperty("TeacherName")]
-            public string TeacherName { get; set; }
-            [JsonProperty("StudentName")]
-            public string StudentName { get; set; }
-            [JsonProperty("Group")]
-            public string Group { get; set; }
-            [JsonProperty("PercentAnsw")]
-            public string PercentAnsw { get; set; }
-            [JsonProperty("TopicQuestion")]
-            public string TopicQuestion { get; set; }
-            [JsonProperty("Questions")]
-            List<Questions> Questions;
-           
-        }
-      
-
-            class Questions
-        {
-            [JsonProperty("Type")]
-            public string QType { get; set; }
-            [JsonProperty("TypeAnsw")]
-            public int QTypeAnsw { get; set; }
-            [JsonProperty("Topic")]
-            public string QTopic { get; set; }
-            [JsonProperty("Subject")]
-            public string QSubject { get; set; }
-            [JsonProperty("isRight")]
-            public bool QAisRight { get; set; }
-            [JsonProperty("Answers")]
-            List<Answers> Answers;
-        
-        }
-
-        class Answers
-        {
-            [JsonProperty("Type")]
-            public string QAType { get; set; }
-            [JsonProperty("Value")]
-            public string QAValue { get; set; }
-            [JsonProperty("isRight")]
-            public bool QAisRight { get; set; }
-            [JsonProperty("isAnsw")]
-            public bool QAisAnsw { get; set; }
-        }
+       
 
         private async  void button1_Click(object sender, System.EventArgs e)
         {
@@ -94,7 +49,7 @@ namespace ProjectProgramTest
                         {
                             
                             string L = await sr.ReadToEndAsync();
-                            RootObject obj = JsonConvert.DeserializeObject<RootObject>(L);
+                            ParseFile obj = JsonConvert.DeserializeObject<ParseFile>(L);
                             textBox1.Text = L;
                             Console.WriteLine(obj.TeacherName);
                             
