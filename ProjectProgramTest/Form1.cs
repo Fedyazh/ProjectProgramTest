@@ -37,7 +37,7 @@ namespace ProjectProgramTest
             openFileDialog1.FilterIndex = 2; //Возвращает или задает индекс фильтра, выбранного в настоящий момент в диалоговом окне файла.
             openFileDialog1.RestoreDirectory = true;
 
-           //ghbdet
+           
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)//Comment
             {
