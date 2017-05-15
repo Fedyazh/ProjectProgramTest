@@ -50,9 +50,10 @@ namespace ProjectProgramTest
                             
                             string L = await sr.ReadToEndAsync();
                             ParseFile obj = JsonConvert.DeserializeObject<ParseFile>(L);
-                            textBox1.Text = L;
-                            Console.WriteLine(obj.TeacherName);
                             
+                            Console.WriteLine(obj.Questions[0].Answers[0].QAValue);
+                            textBox1.Text = obj.Questions[0].Answers[0].QAValue;
+
                             // Insert code to read the stream here.
                         }
                     }

@@ -21,7 +21,7 @@ namespace ProjectProgramTest
         [JsonProperty("TopicQuestion")]
         public string TopicQuestion { get; set; }
         [JsonProperty("Questions")]
-        List<Questions> Questions;
+        public List<Questions> Questions;
 
     }
 
@@ -39,7 +39,7 @@ namespace ProjectProgramTest
         [JsonProperty("isRight")]
         public bool QAisRight { get; set; }
         [JsonProperty("Answers")]
-        List<Answers> Answers;
+        public List<Answers> Answers;
 
     }
 
